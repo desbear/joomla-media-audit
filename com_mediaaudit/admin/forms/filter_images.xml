@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form>
+    <fields name="filter">
+        <field name="search" type="text" label="COM_MEDIAAUDIT_FILTER_SEARCH" description="COM_MEDIAAUDIT_FILTER_SEARCH_DESC" hint="COM_MEDIAAUDIT_FILTER_SEARCH" inputmode="search"/>
+        <field name="type" type="list" label="COM_MEDIAAUDIT_FILTER_TYPE" class="js-select-submit-on-change">
+            <option value="">COM_MEDIAAUDIT_FILTER_TYPE_SELECT</option>
+            <option value="jpg">JPEG</option>
+            <option value="png">PNG</option>
+            <option value="gif">GIF</option>
+            <option value="webp">WebP</option>
+            <option value="avif">AVIF</option>
+            <option value="svg">SVG</option>
+        </field>
+        <field name="used" type="list" label="COM_MEDIAAUDIT_FILTER_USED" class="js-select-submit-on-change">
+            <option value="">COM_MEDIAAUDIT_FILTER_USED_SELECT</option>
+            <option value="1">COM_MEDIAAUDIT_FILTER_USED_YES</option>
+            <option value="0">COM_MEDIAAUDIT_FILTER_USED_NO</option>
+        </field>
+        <field name="state" type="list" label="COM_MEDIAAUDIT_FILTER_CONVERSION" class="js-select-submit-on-change">
+            <option value="">COM_MEDIAAUDIT_FILTER_CONVERSION_SELECT</option>
+            <option value="waiting">COM_MEDIAAUDIT_CONVERSION_WAITING</option>
+            <option value="converted">COM_MEDIAAUDIT_CONVERSION_CONVERTED</option>
+            <option value="not_smaller">COM_MEDIAAUDIT_CONVERSION_NOT_SMALLER</option>
+            <option value="failed">COM_MEDIAAUDIT_CONVERSION_FAILED</option>
+        </field>
+    </fields>
+    <fields name="list">
+        <field name="fullordering" type="list" label="JGLOBAL_SORT_BY" default="f.size DESC" class="js-select-submit-on-change" validate="options">
+            <option value="">JGLOBAL_SORT_BY</option>
+            <option value="f.size DESC">COM_MEDIAAUDIT_SORT_SIZE_DESC</option>
+            <option value="f.size ASC">COM_MEDIAAUDIT_SORT_SIZE_ASC</option>
+            <option value="f.path ASC">COM_MEDIAAUDIT_SORT_PATH_ASC</option>
+            <option value="f.path DESC">COM_MEDIAAUDIT_SORT_PATH_DESC</option>
+            <option value="f.mtime DESC">COM_MEDIAAUDIT_SORT_MTIME_DESC</option>
+            <option value="f.mtime ASC">COM_MEDIAAUDIT_SORT_MTIME_ASC</option>
+            <option value="refs DESC">COM_MEDIAAUDIT_SORT_REFS_DESC</option>
+        </field>
+        <field name="limit" type="limitbox" label="JGLOBAL_LIST_LIMIT" default="25" class="js-select-submit-on-change"/>
+    </fields>
+</form>

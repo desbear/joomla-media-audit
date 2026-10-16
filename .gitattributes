@@ -1,0 +1,4 @@
+# What the public repository leaves out: the plans, reports and runbooks of the sites that it was
+# made for. scripts/export-public.sh builds the public tree with git archive, which reads this.
+docs/internal/ export-ignore
+scripts/export-public.sh export-ignore

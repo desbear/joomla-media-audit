@@ -1,0 +1,1 @@
+-- 0.6.0: no change of the tables

@@ -1,0 +1,1 @@
+-- 0.5.0: no change of the tables

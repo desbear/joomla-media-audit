@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<access component="com_mediaaudit">
+    <section name="component">
+        <action name="core.admin" title="JACTION_ADMIN"/>
+        <action name="core.options" title="JACTION_OPTIONS"/>
+        <action name="core.manage" title="JACTION_MANAGE"/>
+        <action name="mediaaudit.quarantine" title="COM_MEDIAAUDIT_ACTION_QUARANTINE"/>
+        <action name="mediaaudit.delete" title="COM_MEDIAAUDIT_ACTION_DELETE"/>
+        <action name="mediaaudit.localize" title="COM_MEDIAAUDIT_ACTION_LOCALIZE"/>
+        <action name="mediaaudit.convert" title="COM_MEDIAAUDIT_ACTION_CONVERT"/>
+    </section>
+</access>

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form>
+    <fields name="filter">
+        <field name="search" type="text" label="COM_MEDIAAUDIT_FILTER_SEARCH_URL" description="COM_MEDIAAUDIT_FILTER_SEARCH_URL_DESC" hint="COM_MEDIAAUDIT_FILTER_SEARCH_URL" inputmode="search"/>
+        <field name="state" type="list" label="COM_MEDIAAUDIT_FILTER_COPY" default="copied" class="js-select-submit-on-change" validate="options">
+            <option value="copied">COM_MEDIAAUDIT_FILTER_COPY_COPIED</option>
+            <option value="waiting">COM_MEDIAAUDIT_FILTER_COPY_WAITING</option>
+            <option value="failed">COM_MEDIAAUDIT_FILTER_COPY_FAILED</option>
+        </field>
+        <field name="host" type="list" label="COM_MEDIAAUDIT_HEADING_HOST" class="js-select-submit-on-change">
+            <option value="">COM_MEDIAAUDIT_FILTER_HOST_SELECT</option>
+        </field>
+    </fields>
+    <fields name="list">
+        <field name="fullordering" type="list" label="JGLOBAL_SORT_BY" default="u.id DESC" class="js-select-submit-on-change" validate="options">
+            <option value="">JGLOBAL_SORT_BY</option>
+            <option value="u.id DESC">COM_MEDIAAUDIT_SORT_COPIED_DESC</option>
+            <option value="u.id ASC">COM_MEDIAAUDIT_SORT_COPIED_ASC</option>
+            <option value="u.size DESC">COM_MEDIAAUDIT_SORT_SIZE_DESC</option>
+            <option value="u.size ASC">COM_MEDIAAUDIT_SORT_SIZE_ASC</option>
+            <option value="u.local_path ASC">COM_MEDIAAUDIT_SORT_PATH_ASC</option>
+            <option value="u.host ASC">COM_MEDIAAUDIT_SORT_HOST_ASC</option>
+        </field>
+        <field name="limit" type="limitbox" label="JGLOBAL_LIST_LIMIT" default="25" class="js-select-submit-on-change"/>
+    </fields>
+</form>

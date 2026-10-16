@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<extension type="plugin" group="system" method="upgrade">
+    <name>plg_system_mediaaudit</name>
+    <author>GSS</author>
+    <creationDate>2026-09</creationDate>
+    <copyright>(C) 2026 GSS</copyright>
+    <license>GNU General Public License version 2 or later; see LICENSE</license>
+    <version>0.15.0</version>
+    <description>PLG_SYSTEM_MEDIAAUDIT_XML_DESCRIPTION</description>
+    <namespace path="src">Gss\Plugin\System\Mediaaudit</namespace>
+    <files>
+        <folder plugin="mediaaudit">services</folder>
+        <folder>src</folder>
+    </files>
+    <languages folder="language">
+        <language tag="en-GB">en-GB/plg_system_mediaaudit.ini</language>
+        <language tag="en-GB">en-GB/plg_system_mediaaudit.sys.ini</language>
+        <language tag="zh-TW">zh-TW/plg_system_mediaaudit.ini</language>
+        <language tag="zh-TW">zh-TW/plg_system_mediaaudit.sys.ini</language>
+    </languages>
+</extension>

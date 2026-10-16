@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config>
+    <fieldset name="paths" label="COM_MEDIAAUDIT_CONFIG_PATHS">
+        <field name="site_domains" type="textarea" label="COM_MEDIAAUDIT_CONFIG_SITE_DOMAINS" description="COM_MEDIAAUDIT_CONFIG_SITE_DOMAINS_DESC" rows="5" filter="string"/>
+        <field name="base_path" type="text" label="COM_MEDIAAUDIT_CONFIG_BASE_PATH" description="COM_MEDIAAUDIT_CONFIG_BASE_PATH_DESC" filter="string"/>
+    </fieldset>
+    <fieldset name="scan" label="COM_MEDIAAUDIT_CONFIG_SCAN">
+        <field name="hash_files" type="radio" layout="joomla.form.field.radio.switcher" label="COM_MEDIAAUDIT_CONFIG_HASH_FILES" description="COM_MEDIAAUDIT_CONFIG_HASH_FILES_DESC" default="1" filter="integer">
+            <option value="0">JNO</option>
+            <option value="1">JYES</option>
+        </field>
+        <field name="batch_size" type="number" label="COM_MEDIAAUDIT_CONFIG_BATCH_SIZE" default="200" min="20" max="5000" filter="integer"/>
+        <field name="check_external" type="radio" layout="joomla.form.field.radio.switcher" label="COM_MEDIAAUDIT_CONFIG_CHECK_EXTERNAL" description="COM_MEDIAAUDIT_CONFIG_CHECK_EXTERNAL_DESC" default="0" filter="integer">
+            <option value="0">JNO</option>
+            <option value="1">JYES</option>
+        </field>
+    </fieldset>
+    <fieldset name="quarantine" label="COM_MEDIAAUDIT_CONFIG_QUARANTINE" description="COM_MEDIAAUDIT_CONFIG_QUARANTINE_DESC">
+        <field name="quarantine_scan_age" type="number" label="COM_MEDIAAUDIT_CONFIG_QUARANTINE_SCAN_AGE" description="COM_MEDIAAUDIT_CONFIG_QUARANTINE_SCAN_AGE_DESC" default="24" min="0" max="720" filter="integer"/>
+        <field name="quarantine_delete_days" type="number" label="COM_MEDIAAUDIT_CONFIG_QUARANTINE_DELETE_DAYS" description="COM_MEDIAAUDIT_CONFIG_QUARANTINE_DELETE_DAYS_DESC" default="30" min="1" max="3650" filter="integer"/>
+    </fieldset>
+    <fieldset name="localize" label="COM_MEDIAAUDIT_CONFIG_LOCALIZE" description="COM_MEDIAAUDIT_CONFIG_LOCALIZE_DESC">
+        <field name="localize_hosts" type="textarea" label="COM_MEDIAAUDIT_CONFIG_LOCALIZE_HOSTS" description="COM_MEDIAAUDIT_CONFIG_LOCALIZE_HOSTS_DESC" rows="5" filter="string"/>
+        <field name="localize_on_save" type="radio" layout="joomla.form.field.radio.switcher" label="COM_MEDIAAUDIT_CONFIG_LOCALIZE_ON_SAVE" description="COM_MEDIAAUDIT_CONFIG_LOCALIZE_ON_SAVE_DESC" default="1" filter="integer">
+            <option value="0">JNO</option>
+            <option value="1">JYES</option>
+        </field>
+        <field name="localize_budget" type="number" label="COM_MEDIAAUDIT_CONFIG_LOCALIZE_BUDGET" description="COM_MEDIAAUDIT_CONFIG_LOCALIZE_BUDGET_DESC" default="15" min="1" max="120" filter="integer" showon="localize_on_save:1"/>
+        <field name="missing_image_text" type="text" label="COM_MEDIAAUDIT_CONFIG_MISSING_TEXT" description="COM_MEDIAAUDIT_CONFIG_MISSING_TEXT_DESC" hint="COM_MEDIAAUDIT_CONFIG_MISSING_TEXT_HINT" filter="string"/>
+        <field name="localize_folder" type="text" label="COM_MEDIAAUDIT_CONFIG_LOCALIZE_FOLDER" description="COM_MEDIAAUDIT_CONFIG_LOCALIZE_FOLDER_DESC" default="images/localized" filter="string"/>
+    </fieldset>
+    <fieldset name="convert" label="COM_MEDIAAUDIT_CONFIG_CONVERT" description="COM_MEDIAAUDIT_CONFIG_CONVERT_DESC">
+        <field name="convert_format" type="list" label="COM_MEDIAAUDIT_CONFIG_CONVERT_FORMAT" description="COM_MEDIAAUDIT_CONFIG_CONVERT_FORMAT_DESC" default="" validate="options">
+            <option value="">COM_MEDIAAUDIT_CONFIG_CONVERT_FORMAT_OFF</option>
+            <option value="avif">AVIF</option>
+            <option value="webp">WebP</option>
+        </field>
+        <field name="convert_quality_avif" type="number" label="COM_MEDIAAUDIT_CONFIG_CONVERT_QUALITY_AVIF" description="COM_MEDIAAUDIT_CONFIG_CONVERT_QUALITY_DESC" default="60" min="1" max="100" filter="integer" showon="convert_format:avif"/>
+        <field name="convert_quality_webp" type="number" label="COM_MEDIAAUDIT_CONFIG_CONVERT_QUALITY_WEBP" description="COM_MEDIAAUDIT_CONFIG_CONVERT_QUALITY_DESC" default="82" min="1" max="100" filter="integer" showon="convert_format:webp"/>
+        <field name="convert_min_saving" type="number" label="COM_MEDIAAUDIT_CONFIG_CONVERT_MIN_SAVING" description="COM_MEDIAAUDIT_CONFIG_CONVERT_MIN_SAVING_DESC" default="10" min="0" max="90" filter="integer" showon="convert_format!:"/>
+        <field name="convert_on_save" type="radio" layout="joomla.form.field.radio.switcher" label="COM_MEDIAAUDIT_CONFIG_CONVERT_ON_SAVE" description="COM_MEDIAAUDIT_CONFIG_CONVERT_ON_SAVE_DESC" default="1" filter="integer" showon="convert_format!:">
+            <option value="0">JNO</option>
+            <option value="1">JYES</option>
+        </field>
+        <field name="convert_budget" type="number" label="COM_MEDIAAUDIT_CONFIG_CONVERT_BUDGET" description="COM_MEDIAAUDIT_CONFIG_CONVERT_BUDGET_DESC" default="20" min="1" max="120" filter="integer" showon="convert_format!:[AND]convert_on_save:1"/>
+        <field name="convert_batch" type="number" label="COM_MEDIAAUDIT_CONFIG_CONVERT_BATCH" description="COM_MEDIAAUDIT_CONFIG_CONVERT_BATCH_DESC" default="20" min="1" max="200" filter="integer" showon="convert_format!:"/>
+        <field name="convert_max_megapixels" type="number" label="COM_MEDIAAUDIT_CONFIG_CONVERT_MAX_MEGAPIXELS" description="COM_MEDIAAUDIT_CONFIG_CONVERT_MAX_MEGAPIXELS_DESC" default="40" min="1" max="400" filter="integer" showon="convert_format!:"/>
+        <field name="convert_program" type="text" label="COM_MEDIAAUDIT_CONFIG_CONVERT_PROGRAM" description="COM_MEDIAAUDIT_CONFIG_CONVERT_PROGRAM_DESC" hint="/usr/bin/avifenc" filter="path"/>
+    </fieldset>
+    <fieldset name="permissions" label="JCONFIG_PERMISSIONS_LABEL">
+        <field name="rules" type="rules" label="JCONFIG_PERMISSIONS_LABEL" filter="rules" validate="rules" component="com_mediaaudit" section="component"/>
+    </fieldset>
+</config>

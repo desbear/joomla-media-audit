@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<extension type="plugin" group="mediaaudit" method="upgrade">
+    <name>plg_mediaaudit_easyblog</name>
+    <author>GSS</author>
+    <creationDate>2026-09</creationDate>
+    <copyright>(C) 2026 GSS</copyright>
+    <license>GNU General Public License version 2 or later; see LICENSE</license>
+    <version>0.15.0</version>
+    <description>PLG_MEDIAAUDIT_EASYBLOG_XML_DESCRIPTION</description>
+    <namespace path="src">Gss\Plugin\Mediaaudit\Easyblog</namespace>
+    <files>
+        <folder plugin="easyblog">services</folder>
+        <folder>src</folder>
+    </files>
+    <languages folder="language">
+        <language tag="en-GB">en-GB/plg_mediaaudit_easyblog.ini</language>
+        <language tag="en-GB">en-GB/plg_mediaaudit_easyblog.sys.ini</language>
+        <language tag="zh-TW">zh-TW/plg_mediaaudit_easyblog.ini</language>
+        <language tag="zh-TW">zh-TW/plg_mediaaudit_easyblog.sys.ini</language>
+    </languages>
+</extension>

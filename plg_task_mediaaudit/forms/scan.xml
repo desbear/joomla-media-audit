@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form>
+    <fields name="params">
+        <fieldset name="task_params">
+            <field name="localize" type="radio" layout="joomla.form.field.radio.switcher" label="PLG_TASK_MEDIAAUDIT_LOCALIZE" description="PLG_TASK_MEDIAAUDIT_LOCALIZE_DESC" default="1" filter="integer">
+                <option value="0">JNO</option>
+                <option value="1">JYES</option>
+            </field>
+            <field name="localize_limit" type="number" label="PLG_TASK_MEDIAAUDIT_LOCALIZE_LIMIT" description="PLG_TASK_MEDIAAUDIT_LOCALIZE_LIMIT_DESC" default="50" min="1" max="5000" filter="integer" showon="localize:1"/>
+            <field name="localize_delay" type="number" label="PLG_TASK_MEDIAAUDIT_LOCALIZE_DELAY" description="PLG_TASK_MEDIAAUDIT_LOCALIZE_DELAY_DESC" default="1000" min="0" max="60000" filter="integer" showon="localize:1"/>
+            <field name="convert" type="radio" layout="joomla.form.field.radio.switcher" label="PLG_TASK_MEDIAAUDIT_CONVERT" description="PLG_TASK_MEDIAAUDIT_CONVERT_DESC" default="0" filter="integer">
+                <option value="0">JNO</option>
+                <option value="1">JYES</option>
+            </field>
+            <field name="convert_limit" type="number" label="PLG_TASK_MEDIAAUDIT_CONVERT_LIMIT" description="PLG_TASK_MEDIAAUDIT_CONVERT_LIMIT_DESC" default="50" min="1" max="5000" filter="integer" showon="convert:1"/>
+            <field name="check_external" type="radio" layout="joomla.form.field.radio.switcher" label="PLG_TASK_MEDIAAUDIT_CHECK_EXTERNAL" description="PLG_TASK_MEDIAAUDIT_CHECK_EXTERNAL_DESC" default="0" filter="integer">
+                <option value="0">JNO</option>
+                <option value="1">JYES</option>
+            </field>
+            <field name="check_limit" type="number" label="PLG_TASK_MEDIAAUDIT_CHECK_LIMIT" default="200" min="1" max="10000" filter="integer" showon="check_external:1"/>
+            <field name="recheck_days" type="number" label="PLG_TASK_MEDIAAUDIT_RECHECK_DAYS" description="PLG_TASK_MEDIAAUDIT_RECHECK_DAYS_DESC" default="7" min="0" max="365" filter="integer" showon="check_external:1"/>
+            <field name="email" type="list" label="PLG_TASK_MEDIAAUDIT_EMAIL" default="always" validate="options">
+                <option value="always">PLG_TASK_MEDIAAUDIT_EMAIL_ALWAYS</option>
+                <option value="changes">PLG_TASK_MEDIAAUDIT_EMAIL_CHANGES</option>
+                <option value="never">PLG_TASK_MEDIAAUDIT_EMAIL_NEVER</option>
+            </field>
+            <field name="recipients" type="textarea" label="PLG_TASK_MEDIAAUDIT_RECIPIENTS" description="PLG_TASK_MEDIAAUDIT_RECIPIENTS_DESC" rows="3" filter="string" showon="email!:never"/>
+        </fieldset>
+    </fields>
+</form>

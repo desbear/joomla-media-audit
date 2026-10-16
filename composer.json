@@ -1,0 +1,21 @@
+{
+    "name": "gss/mediaaudit",
+    "description": "Media Audit for Joomla: development tools only, nothing of this is packaged",
+    "type": "project",
+    "license": "GPL-2.0-or-later",
+    "require-dev": {
+        "phpunit/phpunit": "^10.5"
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Gss\\Component\\Mediaaudit\\Administrator\\": "com_mediaaudit/admin/src/",
+            "Gss\\Mediaaudit\\Tests\\": "tests/",
+            "Gss\\Plugin\\Mediaaudit\\Flexicontent\\": "plg_mediaaudit_flexicontent/src/",
+            "Gss\\Plugin\\Mediaaudit\\Easyblog\\": "plg_mediaaudit_easyblog/src/",
+            "Gss\\Plugin\\Mediaaudit\\Falang\\": "plg_mediaaudit_falang/src/"
+        }
+    },
+    "config": {
+        "sort-packages": true
+    }
+}

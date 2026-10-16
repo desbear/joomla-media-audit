@@ -1,0 +1,109 @@
+{
+    "prefix": "images/_mediaaudit_fixtures/",
+    "domain": "site.test",
+    "files": {
+        "images/_mediaaudit_fixtures/a.jpg": {
+            "scenario": 1,
+            "class": "in_use"
+        },
+        "images/_mediaaudit_fixtures/b.jpg": {
+            "scenario": 2,
+            "class": "in_use"
+        },
+        "images/_mediaaudit_fixtures/產品圖.png": {
+            "scenario": 3,
+            "class": "in_use"
+        },
+        "images/_mediaaudit_fixtures/c.jpg": {
+            "scenario": 4,
+            "class": "in_use"
+        },
+        "images/_mediaaudit_fixtures/d-800.jpg": {
+            "scenario": 5,
+            "class": "in_use"
+        },
+        "images/_mediaaudit_fixtures/d-400.jpg": {
+            "scenario": 5,
+            "class": "in_use"
+        },
+        "images/_mediaaudit_fixtures/e.jpg": {
+            "scenario": 6,
+            "class": "in_use"
+        },
+        "images/_mediaaudit_fixtures/f.jpg": {
+            "scenario": 7,
+            "class": "in_use"
+        },
+        "images/_mediaaudit_fixtures/g.jpg": {
+            "scenario": 8,
+            "class": "semi_orphan"
+        },
+        "images/_mediaaudit_fixtures/h.jpg": {
+            "scenario": 9,
+            "class": "semi_orphan"
+        },
+        "images/_mediaaudit_fixtures/orphan.jpg": {
+            "scenario": 10,
+            "class": "orphan"
+        },
+        "images/_mediaaudit_fixtures/photo.jpg": {
+            "scenario": 12,
+            "class": "orphan",
+            "case_suspect_of": "images/_mediaaudit_fixtures/Photo.JPG"
+        },
+        "images/_mediaaudit_fixtures/dup1.jpg": {
+            "scenario": 13,
+            "class": "in_use"
+        },
+        "images/_mediaaudit_fixtures/dup2.jpg": {
+            "scenario": 13,
+            "class": "in_use"
+        },
+        "images/_mediaaudit_fixtures/cat.jpg": {
+            "scenario": 14,
+            "class": "in_use",
+            "since_phase": 4
+        },
+        "images/_mediaaudit_fixtures/menu.png": {
+            "scenario": 14,
+            "class": "in_use",
+            "since_phase": 4
+        },
+        "images/_mediaaudit_fixtures/logo.png": {
+            "scenario": 14,
+            "class": "in_use",
+            "since_phase": 4
+        },
+        "images/_mediaaudit_fixtures/cssbg.png": {
+            "scenario": 14,
+            "class": "in_use",
+            "since_phase": 4
+        },
+        "images/_mediaaudit_fixtures/field.jpg": {
+            "scenario": 15,
+            "class": "in_use",
+            "since_phase": 4
+        },
+        "images/_mediaaudit_fixtures/field2.jpg": {
+            "scenario": 15,
+            "class": "in_use",
+            "since_phase": 4
+        }
+    },
+    "broken": {
+        "images/_mediaaudit_fixtures/missing.jpg": {
+            "scenario": 11,
+            "case_suspect": null
+        },
+        "images/_mediaaudit_fixtures/Photo.JPG": {
+            "scenario": 12,
+            "case_suspect": "images/_mediaaudit_fixtures/photo.jpg"
+        }
+    },
+    "duplicates": [
+        [
+            "images/_mediaaudit_fixtures/dup1.jpg",
+            "images/_mediaaudit_fixtures/dup2.jpg"
+        ]
+    ]
+}

@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<extension type="component" method="upgrade">
+    <name>com_mediaaudit</name>
+    <author>GSS</author>
+    <creationDate>2026-09</creationDate>
+    <copyright>(C) 2026 GSS</copyright>
+    <license>GNU General Public License version 2 or later; see LICENSE</license>
+    <version>0.15.0</version>
+    <description>COM_MEDIAAUDIT_XML_DESCRIPTION</description>
+    <namespace path="src">Gss\Component\Mediaaudit</namespace>
+
+    <install>
+        <sql>
+            <file driver="mysql" charset="utf8">sql/install.mysql.utf8.sql</file>
+        </sql>
+    </install>
+    <uninstall>
+        <sql>
+            <file driver="mysql" charset="utf8">sql/uninstall.mysql.utf8.sql</file>
+        </sql>
+    </uninstall>
+    <update>
+        <schemas>
+            <schemapath type="mysql">sql/updates/mysql</schemapath>
+        </schemas>
+    </update>
+
+    <administration>
+        <menu img="class:images">COM_MEDIAAUDIT</menu>
+        <submenu>
+            <menu link="option=com_mediaaudit&amp;view=dashboard" view="dashboard">COM_MEDIAAUDIT_VIEW_DASHBOARD</menu>
+            <menu link="option=com_mediaaudit&amp;view=images" view="images">COM_MEDIAAUDIT_VIEW_IMAGES</menu>
+            <menu link="option=com_mediaaudit&amp;view=inuse" view="inuse">COM_MEDIAAUDIT_VIEW_INUSE</menu>
+            <menu link="option=com_mediaaudit&amp;view=orphans" view="orphans">COM_MEDIAAUDIT_VIEW_ORPHANS</menu>
+            <menu link="option=com_mediaaudit&amp;view=semiorphans" view="semiorphans">COM_MEDIAAUDIT_VIEW_SEMIORPHANS</menu>
+            <menu link="option=com_mediaaudit&amp;view=broken" view="broken">COM_MEDIAAUDIT_VIEW_BROKEN</menu>
+            <menu link="option=com_mediaaudit&amp;view=duplicates" view="duplicates">COM_MEDIAAUDIT_VIEW_DUPLICATES</menu>
+            <menu link="option=com_mediaaudit&amp;view=quarantine" view="quarantine">COM_MEDIAAUDIT_VIEW_QUARANTINE</menu>
+            <menu link="option=com_mediaaudit&amp;view=localized" view="localized">COM_MEDIAAUDIT_VIEW_LOCALIZED</menu>
+            <menu link="option=com_mediaaudit&amp;view=rewrites" view="rewrites">COM_MEDIAAUDIT_VIEW_REWRITES</menu>
+        </submenu>
+        <files folder="admin">
+            <filename>access.xml</filename>
+            <filename>config.xml</filename>
+            <folder>forms</folder>
+            <folder>services</folder>
+            <folder>sql</folder>
+            <folder>src</folder>
+            <folder>tmpl</folder>
+        </files>
+        <languages folder="admin/language">
+            <language tag="en-GB">en-GB/com_mediaaudit.ini</language>
+            <language tag="en-GB">en-GB/com_mediaaudit.sys.ini</language>
+            <language tag="zh-TW">zh-TW/com_mediaaudit.ini</language>
+            <language tag="zh-TW">zh-TW/com_mediaaudit.sys.ini</language>
+        </languages>
+    </administration>
+
+    <api>
+        <files folder="api">
+            <folder>src</folder>
+        </files>
+    </api>
+</extension>

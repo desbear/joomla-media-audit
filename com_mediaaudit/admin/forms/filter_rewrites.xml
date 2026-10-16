@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form>
+    <fields name="filter">
+        <field name="search" type="text" label="COM_MEDIAAUDIT_FILTER_SEARCH_SOURCE" description="COM_MEDIAAUDIT_FILTER_SEARCH_SOURCE_DESC" hint="COM_MEDIAAUDIT_FILTER_SEARCH_SOURCE" inputmode="search"/>
+        <field name="state" type="list" label="COM_MEDIAAUDIT_FILTER_STATE" default="kept" class="js-select-submit-on-change" validate="options">
+            <option value="kept">COM_MEDIAAUDIT_FILTER_REWRITE_KEPT</option>
+            <option value="reverted">COM_MEDIAAUDIT_FILTER_REWRITE_REVERTED</option>
+            <option value="all">JALL</option>
+        </field>
+        <field name="kind" type="list" label="COM_MEDIAAUDIT_FILTER_KIND_OF_CHANGE" default="" class="js-select-submit-on-change" validate="options">
+            <option value="">COM_MEDIAAUDIT_FILTER_KIND_OF_CHANGE_ANY</option>
+            <option value="localize">COM_MEDIAAUDIT_KIND_LOCALIZE</option>
+            <option value="remove_lost">COM_MEDIAAUDIT_KIND_REMOVE_LOST</option>
+        </field>
+        <field name="source_type" type="sql" label="COM_MEDIAAUDIT_FILTER_SOURCE_TYPE" query="SELECT DISTINCT source_type AS value, source_type AS text FROM #__mediaaudit_rewrites ORDER BY source_type" key_field="value" value_field="text" class="js-select-submit-on-change">
+            <option value="">COM_MEDIAAUDIT_FILTER_SOURCE_TYPE_ANY</option>
+        </field>
+    </fields>
+    <fields name="list">
+        <field name="fullordering" type="list" label="JGLOBAL_SORT_BY" default="w.id DESC" class="js-select-submit-on-change" validate="options">
+            <option value="">JGLOBAL_SORT_BY</option>
+            <option value="w.id DESC">COM_MEDIAAUDIT_SORT_REWRITTEN_DESC</option>
+            <option value="w.id ASC">COM_MEDIAAUDIT_SORT_REWRITTEN_ASC</option>
+            <option value="w.replaced DESC">COM_MEDIAAUDIT_SORT_REPLACED_DESC</option>
+            <option value="w.source_id ASC">COM_MEDIAAUDIT_SORT_SOURCE_ASC</option>
+        </field>
+        <field name="limit" type="limitbox" label="JGLOBAL_LIST_LIMIT" default="25" class="js-select-submit-on-change"/>
+    </fields>
+</form>

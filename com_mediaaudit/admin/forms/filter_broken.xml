@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form>
+    <fields name="filter">
+        <field name="search" type="text" label="COM_MEDIAAUDIT_FILTER_SEARCH" description="COM_MEDIAAUDIT_FILTER_SEARCH_DESC" hint="COM_MEDIAAUDIT_FILTER_SEARCH" inputmode="search"/>
+        <field name="kind" type="list" label="COM_MEDIAAUDIT_FILTER_KIND" default="local" class="js-select-submit-on-change" validate="options">
+            <option value="local">COM_MEDIAAUDIT_FILTER_KIND_LOCAL</option>
+            <option value="external">COM_MEDIAAUDIT_FILTER_KIND_EXTERNAL</option>
+        </field>
+        <field name="folder" type="list" label="COM_MEDIAAUDIT_FILTER_FOLDER" default="images" class="js-select-submit-on-change" validate="options">
+            <option value="images">COM_MEDIAAUDIT_FILTER_FOLDER_IMAGES</option>
+            <option value="*">COM_MEDIAAUDIT_FILTER_FOLDER_ALL</option>
+        </field>
+        <field name="source_type" type="sql" label="COM_MEDIAAUDIT_FILTER_SOURCE_TYPE" query="SELECT DISTINCT source_type AS value, source_type AS text FROM #__mediaaudit_refs ORDER BY source_type" key_field="value" value_field="text" class="js-select-submit-on-change">
+            <option value="">COM_MEDIAAUDIT_FILTER_SOURCE_TYPE_SELECT</option>
+        </field>
+    </fields>
+    <fields name="list">
+        <field name="fullordering" type="list" label="JGLOBAL_SORT_BY" default="target ASC" class="js-select-submit-on-change" validate="options">
+            <option value="">JGLOBAL_SORT_BY</option>
+            <option value="target ASC">COM_MEDIAAUDIT_SORT_PATH_ASC</option>
+            <option value="target DESC">COM_MEDIAAUDIT_SORT_PATH_DESC</option>
+            <option value="refs DESC">COM_MEDIAAUDIT_SORT_REFS_DESC</option>
+            <option value="live_refs DESC">COM_MEDIAAUDIT_SORT_LIVE_REFS_DESC</option>
+        </field>
+        <field name="limit" type="limitbox" label="JGLOBAL_LIST_LIMIT" default="25" class="js-select-submit-on-change"/>
+    </fields>
+</form>

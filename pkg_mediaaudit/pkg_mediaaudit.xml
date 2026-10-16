@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<extension type="package" method="upgrade">
+    <name>pkg_mediaaudit</name>
+    <packagename>mediaaudit</packagename>
+    <author>GSS</author>
+    <creationDate>2026-09</creationDate>
+    <copyright>(C) 2026 GSS</copyright>
+    <license>GNU General Public License version 2 or later; see LICENSE</license>
+    <version>0.15.0</version>
+    <description>PKG_MEDIAAUDIT_XML_DESCRIPTION</description>
+    <scriptfile>script.php</scriptfile>
+
+    <files folder="packages">
+        <file type="component" id="com_mediaaudit">com_mediaaudit.zip</file>
+        <file type="plugin" id="mediaaudit" group="console">plg_console_mediaaudit.zip</file>
+        <file type="plugin" id="mediaaudit" group="task">plg_task_mediaaudit.zip</file>
+        <file type="plugin" id="mediaaudit" group="system">plg_system_mediaaudit.zip</file>
+        <file type="plugin" id="mediaaudit" group="webservices">plg_webservices_mediaaudit.zip</file>
+        <file type="plugin" id="falang" group="mediaaudit">plg_mediaaudit_falang.zip</file>
+        <file type="plugin" id="flexicontent" group="mediaaudit">plg_mediaaudit_flexicontent.zip</file>
+        <file type="plugin" id="easyblog" group="mediaaudit">plg_mediaaudit_easyblog.zip</file>
+        <file type="plugin" id="mediaaudit" group="mcp">plg_mcp_mediaaudit.zip</file>
+    </files>
+
+    <languages folder="language">
+        <language tag="en-GB">en-GB/pkg_mediaaudit.sys.ini</language>
+        <language tag="zh-TW">zh-TW/pkg_mediaaudit.sys.ini</language>
+    </languages>
+</extension>
